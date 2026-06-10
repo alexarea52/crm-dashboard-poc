@@ -3,6 +3,27 @@
 :root {
   --background: #f7f7fb;
   --foreground: #1c1c28;
+
+  /* CRM brand tokens — overridden per business unit at runtime by ThemeScope.
+     The values here are the default ("corporate") theme. */
+  --crm-primary: #1c2b4a;
+  --crm-primary-hover: #16294a;
+  --crm-accent: #27ae60;
+  --crm-series-2: #7ea8d8;
+  --crm-target: #4f86d6;
+  --crm-warn: #ef8b2c;
+  --crm-muted: #cbd3df;
+
+  /* CRM neutral tokens — fixed surfaces/lines, not business-unit specific. */
+  --crm-surface: #ffffff;
+  --crm-border: #dde2ea;
+  --crm-grid: #e6e9ef;
+  --crm-axis: #c4cad4;
+  --crm-axis-text: #52525b;
+  --crm-label: #3f3f46;
+  --crm-table-head: #f3f5f8;
+  --crm-table-border: #d7dbe3;
+  --crm-row-alt: #fafbfc;
 }
 
 @theme inline {
@@ -11,24 +32,24 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Area52 brand — indigo/violet */
-  --color-brand-50: #eef0fb;
-  --color-brand-100: #e0e2f9;
-  --color-brand-200: #c5c7f3;
-  --color-brand-300: #a3a6ea;
-  --color-brand-400: #8184e0;
-  --color-brand-500: #6c63e6;
-  --color-brand-600: #5b51d8;
-  --color-brand-700: #4a41b8;
-  --color-brand-800: #3b3490;
-  --color-brand-900: #2f2a72;
-
-  /* Accent — coral/rose (signal "hot", highlights) */
-  --color-accent-100: #fde4df;
-  --color-accent-300: #f6a99c;
-  --color-accent-400: #f1816f;
-  --color-accent-500: #ef6b5a;
-  --color-accent-600: #e2543f;
+  /* CRM dashboard tokens — generate bg-crm-*, text-crm-*, border-crm-*,
+     fill-crm-* utilities that resolve the runtime variables above. */
+  --color-crm-primary: var(--crm-primary);
+  --color-crm-primary-hover: var(--crm-primary-hover);
+  --color-crm-accent: var(--crm-accent);
+  --color-crm-series-2: var(--crm-series-2);
+  --color-crm-target: var(--crm-target);
+  --color-crm-warn: var(--crm-warn);
+  --color-crm-muted: var(--crm-muted);
+  --color-crm-surface: var(--crm-surface);
+  --color-crm-border: var(--crm-border);
+  --color-crm-grid: var(--crm-grid);
+  --color-crm-axis: var(--crm-axis);
+  --color-crm-axis-text: var(--crm-axis-text);
+  --color-crm-label: var(--crm-label);
+  --color-crm-table-head: var(--crm-table-head);
+  --color-crm-table-border: var(--crm-table-border);
+  --color-crm-row-alt: var(--crm-row-alt);
 }
 
 @media (prefers-color-scheme: dark) {

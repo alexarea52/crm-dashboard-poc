@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description: "A lightweight CRM dashboard.",
 };
 
+/** Root layout: fonts, global styles, full-height flex shell. */
 export default function RootLayout({
   children,
 }: Readonly<{
